@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="anchor" prefHeight="660.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <children>
+        <Button fx:id="button" layoutX="296.0" layoutY="606.0" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="201.0" text="Добавить изображение">
+         <font>
+            <Font name="Times New Roman" size="17.0" />
+         </font></Button>
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+        <Pagination fx:id="pagination" layoutX="-6.0" layoutY="-1.0" maxPageIndicatorCount="5" pageCount="100" prefHeight="607.0" prefWidth="806.0" />
+      <Button fx:id="buttonDelete" layoutX="701.0" layoutY="609.0" mnemonicParsing="false" text="Очистить " />
+    </children>
+</AnchorPane>
