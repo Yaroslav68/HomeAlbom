@@ -17,16 +17,15 @@ public class DatabaseHandler extends Configs {
         return dbConnection;
     }
 
-    public void signUpUser(String surname, String name, String patronymic, String dom, String street,
-                           String hata) {
-        String insert = "INSERT INTO " + Const.IMAGES_TABLE + "(" + Const.IMAGES_ID + "," + Const.IMAGES_NAME + "," + ")" + "VALUES(?,?)";
+    public void signUpUser(String idimages, Blob images) {
+        Blob insert = "INSERT INTO " + Const.IMAGES_TABLE + "(" + Const.IMAGES_ID + "," + Const.IMAGES_NAME + "," + ")" + "VALUES(?,?)";
 
         Connection con = null;
         try {
             con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/mydb?user=root&password=319764Ertv30&serverTimezone=UTC");
             PreparedStatement prSt = getDbConnection().prepareStatement(insert);
             prSt.setString(1, idimages);
-            prSt.setString(2, images);
+            prSt.setBlob(2, images);
 
 
             prSt.executeUpdate();
